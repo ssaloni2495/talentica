@@ -8,319 +8,599 @@
     <meta name="author" content="">
 
     <title>Assignment</title>
-    <!--Bootstrap 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <!--GoogleFont -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <!--Custom Css Files -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
 </head>
-<body>
+<body class="position-relative" data-spy="scroll" data-target="#mainNav" data-offset="100">
 	<!-------------------------------------------------------------->
 	<!------------------------Header Section------------------------>
 	<!-------------------------------------------------------------->
-	<header class="header-section" id="header-section">
-		<nav class="navbar navbar-expand-lg navbar-light">
-			<div class="container-fluid">
-				<a class="navbar-brand text-white montserrat-m f-25 p-0" href="javascript:void(0)"><img src="images/logo.svg"></a>
-			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-			    	<span class="navbar-toggler-icon"></span>
-			  	</button>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+		<div class="container-fluid">
+			<a class="navbar-brand p-0" href="javascript:void(0)"><img src="images/logo.svg" alt="logo"></a>
+		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
 
-				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-				    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-				      	<li class="nav-item">
-				        	<a class="nav-link text-white montserrat-sb f-25 p-0" href="javascript:void(0)">Home</a>
-				      	</li>	
-				      	<li class="nav-item">
-				        	<a class="nav-link text-white montserrat-sb f-25 p-0" href="javascript:void(0)">Benefits</a>
-				      	</li>
-				      	<li class="nav-item">
-				        	<a class="nav-link text-white montserrat-sb f-25 p-0" href="javascript:void(0)">Facilities</a>
-				      	</li>
-				      	<li class="nav-item">
-				        	<a class="nav-link text-white montserrat-sb f-25 p-0" href="javascript:void(0)">Gallery</a>
-				      	</li>
-				      	<li class="nav-item">
-				        	<a class="nav-link text-white montserrat-sb f-25 p-0" href="javascript:void(0)">Pricing</a>
-				      	</li>
-				      	<li class="nav-item">
-				        	<a class="nav-link text-white montserrat-sb f-25 p-0" href="javascript:void(0)">Contact us</a>
-				      	</li>				  
-				    </ul>
-				</div>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+			      	<li class="nav-item">
+			        	<a class="nav-link p-0" href="#banner">Home</a>
+			      	</li>	
+			      	<li class="nav-item">
+			        	<a class="nav-link p-0" href="#benefits">Benefits</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link p-0" href="#facilities">Facilities</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link p-0" href="#gallery">Gallery</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link p-0" href="#pricing">Pricing</a>
+			      	</li>
+			      	<li class="nav-item pr-0">
+			        	<a class="nav-link p-0" href="#contactus">Contact us</a>
+			      	</li>				  
+			    </ul>
 			</div>
-		</nav>
-	</header>
+		</div>
+	</nav>
 
-	<section class="banner" id="banner">
+	<!-------------------------------------------------------------->
+	<!------------------------Banner Section------------------------>
+	<!-------------------------------------------------------------->
+	<section class="banner position-relative d-flex align-items-center" id="banner">
 		<div class="container">
-			<div class="banner-inner-section">
+			<div class="banner-inner-section text-center">
 				<h1 class="text-center">Best Co-working Space at Best Price</h1>
-				<p class="text-center">Expect the best-in-class! An Alley with a record of successful startups is launching a top-notch co-working space with exclusive amenities, only for tech startups. Recreate history at Bootstrap Alley.</p>
-				<button>Get Started</button>
-				<a href="#"><img src="images/arrow-down.svg"></a>
+				<p class="text-center">Expect the best-in-class! An Alley with a record of successful startups is launching a top-notch co-working <br/> space with exclusive amenities, only for tech startups. Recreate history at Bootstrap Alley.</p>
+				<div><button class="btn btn-common">Get Started</button></div>
 			</div>
+			<a href="#benefits" class="arrow-down-banner"><img src="images/arrow-down.svg" alt="arrow-down"></a>
 		</div>
 	</section>
 
+	<!-------------------------------------------------------------->
+	<!------------------------Benefits Section------------------------>
+	<!-------------------------------------------------------------->
 	<section class="benefits" id="benefits">
 		<div class="container-fluid">
 			<h1 class="text-center">Benefits</h1>
 			<hr>
-			<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
+			<p class="text-center para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla <br/> ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
 			<div class="row">
 				<div class="col-xl-4">
-					<div class="box-wrapper text-center">
-						<img src="images/benefit-img-1.svg">
+					<a href="javascript:void(0)" class="box-wrapper text-center">
+						<img src="images/benefit-img-1.svg" alt= "benefit-img">
 						<h4>Like Minded Startups</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
-					</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla <br/> ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
+					</a>
 				</div>
 				<div class="col-xl-4">
-					<div class="box-wrapper text-center">
-						<img src="images/benefit-img-2.svg">
+					<a href="javascript:void(0)" class="box-wrapper text-center">
+						<img src="images/benefit-img-2.svg" alt= "benefit-img">
 						<h4>Large Terrace</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
-					</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla <br/> ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
+					</a>
 				</div>
 				<div class="col-xl-4">
-					<div class="box-wrapper text-center">
-						<img src="images/benefit-img-3.svg">
+					<a href="javascript:void(0)" class="box-wrapper text-center">
+						<img src="images/benefit-img-3.svg" alt= "benefit-img">
 						<h4>Ready to Move in</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
-					</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla <br/> ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
+					</a>
 				</div>
 				<div class="col-xl-4">
-					<div class="box-wrapper text-center">
-						<img src="images/benefit-img-4.svg">
+					<a href="javascript:void(0)" class="box-wrapper text-center">
+						<img src="images/benefit-img-4.svg" alt= "benefit-img">
 						<h4>Free Unlimited Wi-Fi</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
-					</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla <br/> ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
+					</a>
 				</div>
 				<div class="col-xl-4">
-					<div class="box-wrapper text-center">
-						<img src="images/benefit-img-5.svg">
+					<a href="javascript:void(0)" class="box-wrapper text-center">
+						<img src="images/benefit-img-5.svg" alt= "benefit-img">
 						<h4>Located on Main Road</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
-					</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla <br/> ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
+					</a>
 				</div>
 				<div class="col-xl-4">
-					<div class="box-wrapper text-center">
-						<img src="images/benefit-img-6.svg">
+					<a href="javascript:void(0)" class="box-wrapper text-center">
+						<img src="images/benefit-img-6.svg" alt= "benefit-img">
 						<h4>Located on Main Road</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
-					</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla <br/> ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
+					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-------------------------------------------------------------->
+	<!------------------------Facilities Section------------------------>
+	<!-------------------------------------------------------------->
 	<section class="facilities" id="facilities">
 		<div class="container-fluid">
-			<h1 class="text-center">Facilities</h1>
+			<h1 class="text-center text-white">Facilities</h1>
 			<hr>
-			<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
-
-			<div class="row">
-				<div class="col-lg-3">
-					<div>
-						<img src="images/icon-1.svg">
-						<p>24/7 Access</p>
+			<p class="text-center text-white para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla <br/> ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
+			<div class="col-xl-12 mx-auto">
+				<div class="flex-wrapper">
+					<div class="flex-div">
+						<a href="javascript:void(0)">
+							<img src="images/icon-1.svg" alt = "icon">
+							<p>24/7 Access</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-2.svg" alt = "icon">
+							<p>CCTV & Access Cards</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-3.svg" alt = "icon">
+							<p>Large Cafeteria</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-4.svg" alt = "icon">
+							<p>Large Open Terrace</p>
+						</a>
 					</div>
-					<div>
-						<img src="images/icon-2.svg">
-						<p>CCTV & Access Cards</p>
+					<div class="flex-div">
+						<a href="javascript:void(0)">
+							<img src="images/icon-5.svg" alt = "icon">
+							<p>Spacious Cubicles</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-6.svg" alt = "icon">
+							<p>Fridge & Microwave</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-7.svg" alt = "icon">
+							<p>TV Conference Rooms</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-8.svg" alt = "icon">
+							<p>Housekeeping Facilities</p>
+						</a>
 					</div>
-					<div>
-						<img src="images/icon-3.svg">
-						<p>Large Cafeteria</p>
+					<div class="flex-div">				
+						<a href="javascript:void(0)">
+							<img src="images/icon-9.svg" alt = "icon">
+							<p>24/7 Power Backup</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-10.svg" alt = "icon">
+							<p>TV & Set Top Box</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-11.svg" alt = "icon">
+							<p>Various Meeting Rooms</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-12.svg" alt = "icon">
+							<p>Parking Spaces</p>
+						</a>
 					</div>
-					<div>
-						<img src="images/icon-4.svg">
-						<p>Large Open Terrace</p>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div>
-						<img src="images/icon-5.svg">
-						<p>Spacious Cubicles</p>
-					</div>
-					<div>
-						<img src="images/icon-6.svg">
-						<p>Fridge & Microwave</p>
-					</div>
-					<div>
-						<img src="images/icon-7.svg">
-						<p>TV Conference Rooms</p>
-					</div>
-					<div>
-						<img src="images/icon-8.svg">
-						<p>Housekeeping Facilities</p>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div>
-						<img src="images/icon-9.svg">
-						<p>24/7 Power Backup</p>
-					</div>
-					<div>
-						<img src="images/icon-10.svg">
-						<p>TV & Set Top Box</p>
-					</div>
-					<div>
-						<img src="images/icon-11.svg">
-						<p>Various Meeting Rooms</p>
-					</div>
-					<div>
-						<img src="images/icon-12.svg">
-						<p>Parking Spaces</p>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div>
-						<img src="images/icon-13.svg">
-						<p>Printer Facilities</p>
-					</div>
-					<div>
-						<img src="images/icon-14.svg">
-						<p>Reception Area</p>
-					</div>
-					<div>
-						<img src="images/icon-15.svg">
-						<p>Postal Address</p>
+					<div class="flex-div">
+						<a href="javascript:void(0)">
+							<img src="images/icon-13.svg" alt="icon">
+							<p>Printer Facilities</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-14.svg" alt="icon">
+							<p>Reception Area</p>
+						</a>
+						<a href="javascript:void(0)">
+							<img src="images/icon-15.svg" alt="icon">
+							<p>Postal Address</p>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-------------------------------------------------------------->
+	<!------------------------Gallery Section------------------------>
+	<!-------------------------------------------------------------->
 	<section class="gallery" id="gallery">
 		<div class="container-fluid">
-			<h1 class="text-center">Facilities</h1>
+			<h1 class="text-center">Gallery</h1>
 			<hr>
-			<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
+			<p class="text-center para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla <br/> ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
 			<div class="gallery-wrapper">
-				<div>
-					<img src="images/gallery-img1.png">
+				<div class="hover-div">
+					<a href="javascript:void(0)">
+						<div class="content-overlay"></div>
+						<img class="img-fluid" src="images/gallery-img-1.png" alt="gallery-img">
+						<div class="content-details fadeIn-bottom fadeIn-left">			   
+				        	<p class="text-white mb-0">Lorem Ipsum</p>
+				      </div>
+					</a>
 				</div>
-				<div>
-					<img src="images/gallery-img2.png">
+				<div class="hover-div">
+					<a href="javascript:void(0)">
+						<div class="content-overlay"></div>
+						<img class="img-fluid" src="images/gallery-img-2.png" alt="gallery-img">
+						<div class="content-details fadeIn-bottom fadeIn-left">			   
+				        	<p class="text-white mb-0">Lorem Ipsum</p>
+				      </div>
+					</a>
 				</div>
-				<div>
-					<img src="images/gallery-img3.png">				
+				<div class="hover-div">
+					<a href="javascript:void(0)">
+						<div class="content-overlay"></div>
+						<img class="img-fluid" src="images/gallery-img-3.png" alt="gallery-img">
+						<div class="content-details fadeIn-bottom fadeIn-left">			   
+				        	<p class="text-white mb-0">Lorem Ipsum</p>
+				      </div>
+					</a>				
 				</div>
-				<div>
-					<img src="images/gallery-img4.png">
+				<div class="hover-div">
+					<a href="javascript:void(0)">
+						<div class="content-overlay"></div>
+						<img class="img-fluid" src="images/gallery-img-4.png" alt="gallery-img">
+						<div class="content-details fadeIn-bottom fadeIn-left">			   
+				        	<p class="text-white mb-0">Lorem Ipsum</p>
+				      </div>
+					</a>
 				</div>
-				<div>
-					<img src="images/gallery-img5.png">
+				<div class="hover-div">
+					<a href="javascript:void(0)">
+						<div class="content-overlay"></div>
+						<img class="img-fluid" src="images/gallery-img-5.png" alt="gallery-img">
+						<div class="content-details fadeIn-bottom fadeIn-left">			   
+				        	<p class="text-white mb-0">Lorem Ipsum</p>
+				      </div>
+					</a>
 				</div>
-				<div>
-					<img src="images/gallery-img6.png">
+				<div class="hover-div">
+					<a href="javascript:void(0)">
+						<div class="content-overlay"></div>
+						<img class="img-fluid" src="images/gallery-img-6.png" alt="gallery-img">
+						<div class="content-details fadeIn-bottom fadeIn-left">			   
+				        	<p class="text-white mb-0">Lorem Ipsum</p>
+				      </div>
+					</a>
+				</div>
+			</div>
+			<div class="galler-wrapper-mobile">
+				<div class="text-center">
+				  	<img src="images/gallery-img-1.png" class="img-fluid mb-2" id="expandedImg" alt="img">
+				  	<div id="imgtext"></div>
+				</div>
+				<div class="row">
+					<div class="col">
+					    <img class="img-fluid" src="images/gallery-img-1.png" alt="thumbnail-img" onclick="myFunction(this);">
+					</div>
+				  	<div class="col">
+				    	<img class="img-fluid" src="images/gallery-img-2.png" alt="thumbnail-img" onclick="myFunction(this);">
+				  	</div>
+				  	<div class="col">
+				    	<img class="img-fluid" src="images/gallery-img-3.png" alt="thumbnail-img" onclick="myFunction(this);">
+				  	</div>
+				  	<div class="col">
+				    	<img class="img-fluid" src="images/gallery-img-4.png" alt="thumbnail-img" onclick="myFunction(this);">
+				  	</div>
+				  	<div class="col">
+				    	<img class="img-fluid" src="images/gallery-img-5.png" alt="thumbnail-img" onclick="myFunction(this);">
+				  	</div>
+				  	<div class="col">
+				    	<img class="img-fluid" src="images/gallery-img-6.png" alt="thumbnail-img" onclick="myFunction(this);">
+				  	</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-------------------------------------------------------------->
+	<!------------------------Pricing Section------------------------>
+	<!-------------------------------------------------------------->
 	<section class="pricing" id="pricing">
-		<div class="container-fluid">
-			<h1 class="text-center">Facilities</h1>
+		<div class="container text-center">
+			<h1 class="text-center">Pricing</h1>
 			<hr>
-			<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper. Morbi felis orci, lacinia a velit et, sodales...</p>
-			<div class="circular-div">
-				<p>6000</p>
-				<p>per month for single desk</p>
-				<p>plus taxes as applicable</p>
+			<p class="text-center text-white para">Check out our attractive pricing plan Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit. Nunc porta fringilla ullamcorper.</p>
+			<div class="circular-div d-flex justify-content-center mx-auto align-items-center">
+				<div>
+					<p class="d-inline currency">&#8377;</p>
+					<h1 class="d-inline">6000</h1>
+					<p class="mb-0 sub-1">per month for single desk</p>
+					<p class="mb-0 sub-2">plus taxes as applicable</p>
+				</div>
 			</div>
-			<button>Book Now</button>
+			<button class="btn btn-common">Book Now</button>
 		</div>
 	</section>
 
+	<!-------------------------------------------------------------->
+	<!------------------------Contactus Section------------------------>
+	<!-------------------------------------------------------------->
 	<section class="contactus" id="contactus">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-5">
-					<h1 class="text-center">Say Hello</h1>
-					<hr>
-					<div class="address">
-						<h4>BOOTSTRAPALLEY</h4>
-						<p>B-7/8, Anmol Pride, Baner <br/>Pune 411045</p>
+			<div class="col-xl-10 mx-auto">
+				<div class="row">
+					<div class="col-xl-5 col-lg-5 info">
+						<h1 class="text-left">Say Hello</h1>
+						<div class="clearfix">
+							<hr>
+						</div>
+						<div class="address">
+							<h4 class="mb-0">BOOTSTRAPALLEY</h4>
+							<p>B-7/8, Anmol Pride, Baner <br/>Pune 411045</p>
+						</div>
+						<div class="contact-number">
+							<a href="tel:+91 20 4075 1111" class="d-block">+91 20 4075 1111</a>
+							<a href="tel:+91 20 4075 1177" class="d-block">+91 20 4075 1177</a>
+						</div>
+						<div class="mailing">
+							<a href="mailto:bootstrap-alley@talentica.com">bootstrap-alley@talentica.com</a>
+						</div>
 					</div>
-					<div class="contact-number">
-						<a href="tel:+91 20 4075 1111">+91 20 4075 1111</a>
-						<a href="tel:+91 20 4075 1177">+91 20 4075 1177</a>
+					<div class="col-xl-7 col-lg-7">
+						<h1 class="text-left">Write to us</h1>
+						<hr>
+						<form id="form">
+							<p></p>
+							<div class="form-group">
+							    <input type="text" class="form-control" id="fldName" placeholder="Name*">
+							</div>
+							<div class="form-group">
+							    <input type="email" class="form-control" id="fldEmail" placeholder="Email Id*">
+							</div>
+							<div class="form-group">
+							    <input type="text" class="form-control" id="fldContact" placeholder="Contact No.">
+							</div>
+							<div class="form-group">
+							    <textarea class="form-control" rows="1" id="fldMessage" placeholder="Message"></textarea>
+							</div>
+							<div class="text-left">
+								<button type="button" class="btn btn-common" id="submitBtn">Send</button>
+							</div>
+						</form>
 					</div>
-					<div class="mailing">
-						<a href="mailto:bootstrap-alley@talentica.com">bootstrap-alley@talentica.com</a>
-					</div>
-				</div>
-				<div class="col-xl-7">
-					<h1 class="text-center">Write to us</h1>
-					<hr>
-					<form>
-						<div class="form-group">
-						    <input type="text" class="form-control" id="" placeholder="Name*">
-						</div>
-						<div class="form-group">
-						    <input type="email" class="form-control" id="" placeholder="Email Id*">
-						</div>
-						<div class="form-group">
-						    <input type="text" class="form-control" id="" placeholder="Contact No.">
-						</div>
-						<div class="form-group">
-						    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
-						</div>
-						<div class="text-left">
-							<button type="submit" class="btn btn-primary">Send</button>
-						</div>
-					</form>
 				</div>
 			</div>
 		</div>
 	</section>
-
+	
+	<!-------------------------------------------------------------->
+	<!------------------------Map Section------------------------>
+	<!-------------------------------------------------------------->
 	<section class="map" id="map">
-		
+		<div id="googleMap" style="width:100%;height:400px;"></div>
+	    <script>
+			function myMap() {
+			var myCenter = new google.maps.LatLng(18.5590, 73.7868);
+			var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			var marker = new google.maps.Marker({position:myCenter});
+			marker.setMap(map);
+			}
+		</script>
 	</section>
 
+	<!-------------------------------------------------------------->
+	<!------------------------Footer Section------------------------>
+	<!-------------------------------------------------------------->
 	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-4">
-					<p>follow us on</p>
-					<div class="social-icons">
-						<a href="#"><img src="images/linkedin.svg"></a>
+		<div class="container-fluid">
+			<div class="col-xl-10 mx-auto">
+				<div class="row">
+					<div class="col-xl-4 col-md-4 col-12 mb-25">
+						<p>follow us on</p>
+							<a href="javascript:void(0)" title="Linkedin"><img alt="linkedin" src="images/linkedin.svg"></a>
+						
+							<a href="javascript:void(0)" title="Facebook" class="mlr"><img alt="facebook" src="images/facebook.svg"></a>
+						
+							<a href="javascript:void(0)" title="Twitter"><img alt="twitter" src="images/twitter.svg"></a>
 					</div>
-					<div class="social-icons">
-						<a href="#"><img src="images/facebook.svg"></a>
+					<div class="col-xl-5 col-md-5 col-12 text-md-left mb-25">
+						<a href="javascript:void(0)" class="d-block">Terms & Conditions</a>
+						<a href="javascript:void(0)" class="d-block">Privacy Policy</a>
 					</div>
-					<div class="social-icons">
-						<a href="#"><img src="images/twitter.svg"></a>
+					<div class="col-xl-3 col-md-3 col-12 text-md-right">
+						<p>powered by</p>
+						<a href="javascript:void(0)" title="Talentica"><img src="images/footer-logo.svg"></a>
 					</div>
 				</div>
-				<div class="col-xl-5">
-					<a href="#">Terms & Conditions</a>
-					<a href="#">Privacy Policy</a>
-				</div>
-				<div class="col-xl-3">
-					<p>powered by</p>
-					<img src="images/footer-logo.svg">
-				</div>
-			</div>
-			<div class="footer-bottom text-center">
-				<p>© bootstrapalley 2016</p>
 			</div>
 		</div>
 	</footer>
 
- 	<script src="js/jquery.min.js"></script>
- 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-	
-</body>
-	</html>
+	<div class="bottom-text text-center">
+		<p class="mb-0">© bootstrapalley 2016</p>
+	</div>
+
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="popper/popper.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu6ytuffnYuUagduAX6v0WGLR83ItMNFA&callback=myMap"></script>
+
+    <!-- //formvalidations -->
+    <script>
+		let watchValidation = false;
+
+		function errorNotification(msg) {
+		  let notificationBlock = document.createElement('div');
+		  notificationBlock.innerHTML = '<div class="alert alert-danger">'+
+		            '<strong>Error!</strong> '+msg+
+		          '</div>';
+		  return notificationBlock;
+		}
+
+		function successNotification(msg) {
+		  let notificationBlock = document.createElement('div');
+		  notificationBlock.innerHTML = '<div class="alert alert-success">'+
+		            '<strong>Success!</strong> '+msg+
+		          '</div>';
+		  return notificationBlock;
+		}
+
+		function removeNotifications(type="") {
+		  let notificationList;
+		  switch (type) {
+		      case 'error':
+		        notificationList = document.getElementsByClassName('alert-danger');
+		      break;
+		      case 'success':
+		        notificationList = document.getElementsByClassName('alert-success');
+		      break;
+		      default:
+		        notificationList = document.getElementsByClassName('alert');
+		      break;
+		  }
+
+		  while (notificationList.length > 0) {
+		    notificationList[0].remove();
+		  }
+		}
+
+		function validateEmail(email) {
+		  let response = {
+		    'status' : true,
+		    'msg' : 'OK'
+		  }
+
+		  if(email.length <= 0) {
+		    response = {
+		      'status' : false,
+		      'msg' : 'Email is Required!'
+		    }
+		  } else if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email))  {
+		    response = {
+		      'status' : false,
+		      'msg' : 'Please enter a valid email address!'
+		    }
+		  }
+
+		  return response;
+		}
+
+		function validateName(name) {
+		  let response = {
+		    'status' : true,
+		    'msg' : 'OK'
+		  }
+
+		  if(name.length <= 0) {
+		    response = {
+		      'status' : false,
+		      'msg' : 'Name is Required!'
+		    }
+		  } else if (!/^[a-zA-Z.\s]+$/i.test(name))  {
+		    response = {
+		      'status' : false,
+		      'msg' : 'Please enter a valid Name!'
+		    }
+		  }
+
+		  return response;
+		}
+
+		function validateContact(contact) {
+		  let response = {
+		    'status' : true,
+		    'msg' : 'OK'
+		  }
+
+		  if (contact.length > 0)  {
+		    if(contact.length != 10) {
+		      response = {
+		        'status' : false,
+		        'msg' : 'Please enter 10 digits for Contact Number!'
+		      }
+		    } else if(!/^[0-9]+$/i.test(contact)) {
+		      response = {
+		        'status' : false,
+		        'msg' : 'Please enter valid Contact Number!'
+		      }
+		    }
+		  }
+
+		  return response;
+		}
+
+		function validationStatus(fieldName="") {
+		  removeNotifications();
+		  let validStatus = true;
+		  let validNameField, validEmailField, validContactField;
+
+		  validNameField = validateName(document.getElementById('fldName').value.trim());
+		  if(!validNameField.status) {
+		    document.getElementById('fldName').after(errorNotification(validNameField.msg));
+		    validStatus = false;
+		  }
+
+		  validEmailField = validateEmail(document.getElementById('fldEmail').value.trim());
+		  if(!validEmailField.status) {
+		    document.getElementById('fldEmail').after(errorNotification(validEmailField.msg));
+		    validStatus = false;
+		  }
+
+		  validContactField = validateContact(document.getElementById('fldContact').value.trim());
+		  if(!validContactField.status) {
+		    document.getElementById('fldContact').after(errorNotification(validContactField.msg));
+		    validStatus = false;
+		  }
+
+		  return validStatus;
+		}
+
+		function submitForm() {
+
+		  watchValidation = true;
+
+		  if(validationStatus()) {
+		    document.getElementById('form').before(successNotification('Form submitted successfully!'));
+		    document.getElementById('form').reset();
+		  }
+		}
+		/*
+		 * Event calls below
+		 */
+		document.getElementById("submitBtn").addEventListener("click", submitForm);
+	</script>
+	<!-- //designingscript -->
+    <script>
+		$(document).ready(function(){		 
+		  	$(".nav-link, .arrow-down-banner").on('click', function(event) {		   
+		    if (this.hash !== "") {		   
+		      	event.preventDefault();
+		      	var hash = this.hash;
+			    $('html, body').animate({
+			        scrollTop: $(hash).offset().top
+			    }, 800, function(){		  		    
+		        	window.location.hash = hash;
+		      	});
+		    	}
+		  	});
+
+		    $(".nav-link").click(function () {
+		        $(".nav-link").removeClass("active");
+		        $(this).addClass("active");   
+		    });
+
+  
+		  	$(window).scroll(function() {    
+			    var scroll = $(window).scrollTop();			 
+			    if (scroll >= 72) {
+			        $(".navbar").addClass("darkheader");
+			    }
+			    else{
+			    	$(".navbar").removeClass("darkheader");
+			    }
+			});
+		});
+    </script>
+    <!-- //mobilegallery -->
+    <script>
+    	function myFunction(imgs) {
+		  	var expandImg = document.getElementById("expandedImg");
+		  	var imgText = document.getElementById("imgtext");
+		  	expandImg.src = imgs.src;
+		  	imgText.innerHTML = imgs.alt;
+		  	expandImg.parentElement.style.display = "block";
+		}
+    </script>
+</body> 
+</html>

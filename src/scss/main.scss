@@ -1,5 +1,592 @@
-.container {
-  display: flex;
-  background-color: red;
-  color: blue;
+/*===============================================================================*/
+/* Bootstrap 4 */
+/*===============================================================================*/
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+/*===============================================================================*/
+/* Base Functions */
+/*===============================================================================*/
+@import "base/_variables";
+@import "base/_typography";
+@import "base/_mixin";
+/*===============================================================================*/
+/* commmonclasses */
+/*===============================================================================*/
+
+html {
+  scroll-padding-top: 72px; /* height of sticky header */
+}
+
+body{
+	font-family: $font_primary;
+}
+
+.para{
+	@include font_parameter($f-18, $body_text, $font-regular,24px, 70px);
+	@include mq('tablet-small', max) {
+        @include font_parameter($f-16, $body_text, $font-regular,24px, 40px);
+    }
+}
+
+h1{
+	@include font_parameter(40px, $dark_color, $font-bold, 48px, 8px);
+	@include mq('tablet-wide', max) {
+      	@include font_parameter(35px, $dark_color, $font-bold, 48px, 8px);
+    }
+	@include mq('tablet-small', max) {
+       @include font_parameter(24px, $dark_color, $font-bold, 28px, 2px);
+    }
+}
+
+hr{
+	@include horizontal-divider(17px);
+	@include mq('tablet-small', max) {
+       border: 1px solid $orange_color;
+       max-width: 62px;
+    }
+}
+
+
+.mlr{
+	margin: 0px 15px;
+}
+
+
+
+/*===============================================================================*/
+/* header */
+/*===============================================================================*/
+
+
+	.navbar{
+		z-index: 3;
+		padding: 14px 5px;
+		border-bottom: 1px solid $main_menu;
+		top: 0px;
+
+		@include mq('tablet-medium', max) {
+            padding: 16px 25px;
+            background-color: rgba(0,0,0,0.6);
+        }
+
+		&.darkheader{
+			background-color:$dark_color;
+			border-bottom: 0px;
+		}
+
+		.nav-item{
+			padding: 0px 25px;
+			@include mq('tablet-medium', max) {
+                padding: 0px;
+            }
+			.nav-link{
+				@include font_parameter(15px, $main_menu, $font-regular, 18px, 0px);
+				@include mq('tablet-medium', max) {
+                    display: inline-block;
+                    margin-bottom: 10px;
+                }
+
+				text-decoration: none;
+				position:relative;
+				&.active{
+					color: $light_color;
+						&:before{
+						visibility: visible;
+    					transform: scaleX(1);
+					}
+				}
+				&:before{
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 3px;
+					bottom: -27px;
+					left: 0;
+					background: $orange_color;
+					visibility: hidden;
+					border-radius: 5px;
+					transform: scaleX(0);
+					transition: .25s linear;
+					@include mq('tablet-medium', max) {
+	                    bottom: -5px;
+	                }
+				}
+
+				&:hover{
+					color: $light_color;
+					&:before{
+						visibility: visible;
+  						transform: scaleX(1);
+					}
+				}
+			}
+		}
+
+		.navbar-toggler{
+			border-color: transparent;
+			&:focus{
+				outline: none;
+			}
+			.navbar-toggler-icon {
+				background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(204 204 204)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); 
+			}
+		}
+	}
+
+/*===============================================================================*/
+/* banner */
+/*===============================================================================*/
+.banner{
+	background-image: url('../../images/banner.png');
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include mq('tablet-wide', max){
+		height: 600px;
+	}
+
+	@include mq('tablet', max){
+		height: 500px;
+	}
+
+	&:before{
+		background: transparent linear-gradient(0deg, #231F2033 0%, $dark_color 100%) 0% 0%;
+		position: absolute;
+	    content: " ";
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: block;
+	    z-index: 0;
+	}
+
+	.banner-inner-section{
+		position: relative;
+		z-index:2;
+		@include mq('tablet-small', max){
+			margin-top: 77px;
+		}
+	}
+
+	.arrow-down-banner{
+		display: inline-block;
+	    position: absolute;
+	    right: 50%;
+	    transform: translateX(50%);
+	    bottom: 5%;
+	    z-index: 0;
+	    @include mq('tablet-small', max){
+			display: none;
+		}
+
+	    img{
+	    	animation: mover 1s infinite  alternate;
+	    }
+	}
+
+
+	h1{
+		@include font_parameter(56px, $light_color, $font-black, normal, 12px);
+		@include mq('tablet-wide', max){
+			@include font_parameter(40px, $light_color, $font-black, normal, 12px);
+		}
+		@include mq('tablet', max){
+			@include font_parameter(30px, $light_color, $font-black, 36px, 6px);
+		}
+	} 
+
+	p{
+		@include font_parameter($f-18, $light_color, $font-regular, 26px, 40px);
+	}
+
+	button{
+		@include button(165px);
+		font-weight: 600;
+		@include mq('tablet', max){
+			font-weight: 400;
+		}
+		&:hover{
+			@include hoverbutton(none, transparent);
+			border: 1px solid #fff;
+			color: $light_color;
+		}
+	}
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/*===============================================================================*/
+/* benefits */
+/*===============================================================================*/
+.benefits{
+	padding: 35px 0px 50px;
+	.box-wrapper{
+		display: block;
+		max-width: 300px;
+		margin: 0 auto;
+		padding: 10px;
+		margin-bottom: 35px;
+
+		&:hover{
+			text-decoration: none;
+			border-radius: 5px;
+			box-shadow: 0 1px 5px 0 $bg_yellow;
+			transition: 0.5s ease-in-out;
+			transform: scale(1.1);
+		}
+		img{
+			margin-bottom: 12px;
+		}
+
+		h4{
+			@include font_parameter(15px, $title, 600, normal, 5px);
+		}
+
+		p{
+			@include font_parameter(15px, $body_text, $font-regular, 20px, 0px);
+		}
+	}
+	
+}
+/*===============================================================================*/
+/* facilities */
+/*===============================================================================*/
+.facilities{
+	background-color: $bg_dark;
+	padding: 35px 0px 73px;
+	@include mq('tablet-small', max) {
+        padding: 30px 0px 30px;
+    }
+
+	a{
+		color: $primary_color;
+		display: block;
+    	text-align: left;
+    	margin-bottom: 42px;
+    	font-weight: $font-regular;
+    	position:relative;
+
+    	@include mq('tablet', max) {
+            text-align: center;
+        }
+
+        @include mq('tablet-small', max) {
+            margin-bottom: 24px;
+        } 
+
+    	&:before{
+    		content: "";
+		  	position: absolute;
+		  	width: 0;
+		  	height: 2px;
+		  	bottom: -15px;
+		  	left: 0;
+		  	background-color: $primary_color;
+		  	visibility: hidden;
+		  	transition: all 0.3s ease-in-out;
+    	}
+
+    	&:hover{
+    		text-decoration: none;
+    		&:before{
+    			visibility: visible;
+  				width: 100%;
+    		}
+    	}
+
+    	p{
+    		display: inline;
+    		margin-left: 22px;
+    		font-size: 15px;
+    		@include mq('tablet', max) {
+            	display: block;
+            	margin-left: 0px;
+            	margin-top: 10px;
+        	}
+    	}
+	}
+
+	.flex-wrapper{
+		display: flex;
+    	justify-content: space-around;
+
+    	@include mq('tablet', max) {
+            display: block;
+        }
+	}
+}
+
+/*===============================================================================*/
+/* gallery */
+/*===============================================================================*/
+
+.gallery{
+	background-color: $bg_light;
+	padding: 35px 10px 20px;
+	@include mq('tablet-small', max) {
+        padding: 30px 10px 20px;
+    }
+	.gallery-wrapper{
+		@include mq('tablet-small', max) {
+        	display: none;
+    	}
+		display: flex;
+		flex-wrap: wrap;
+			.hover-div{
+				width: 33.33%;
+				position: relative;
+
+				p{
+					@include font_parameter($f-18, $light_color, $font-regular, 24px, 0px);
+				}
+
+				&:hover{
+					.content-overlay{
+						opacity: 1;
+					}
+					.content-details{
+						top: 50%;
+						left: 50%;
+						opacity: 1;
+					}
+				}
+
+				.content-overlay {
+				  	background: rgba(0,0,0,0.7);
+				  	position: absolute;
+				  	height: 100%;
+				  	width: 100%;
+				  	left: 0;
+				  	top: 0;
+				  	bottom: 0;
+				  	right: 0;
+				  	opacity: 0;
+				  	transition: all 0.4s ease-in-out 0s;
+				}
+
+				.content-details {
+				  	position: absolute;
+				  	text-align: center;
+				  	padding-left: 1em;
+				  	padding-right: 1em;
+				  	width: 100%;
+				  	top: 50%;
+				  	left: 50%;
+				  	opacity: 0;			  	
+				  	transform: translate(-50%, -50%);				  
+				  	transition: all 0.3s ease-in-out 0s;
+				}
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+	}
+
+	.galler-wrapper-mobile{
+		display: none;
+		@include mq('tablet-small', max) {
+        	display: block;
+    	}
+		.col img {
+		  	&:hover{
+		  		cursor: pointer; 
+		  	}
+		}
+
+		.row{
+			&:after{
+				content: "";
+  				display: table;
+  				clear: both;
+			}
+		}
+
+		#imgtext {
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+			color: $light_color;
+			font-size: $f-18;
+		}
+
+	}
+
+}
+
+.fadeIn-bottom{
+	  	top: 80%;
+	}
+/*===============================================================================*/
+/* pricing */
+/*===============================================================================*/
+.pricing{
+	background-color: $bg_yellow;
+	padding: 35px 0px 95px;
+	@include mq('tablet-small', max) {
+        padding: 20px 0px 60px;
+    }
+	button{
+		@include button(192px);
+		&:hover{
+			@include hoverbutton(none, transparent);
+			color: $dark_color;
+			border: 1px solid $dark_color;
+		}
+	}
+
+	.circular-div{
+		width: 250px;
+		height: 250px;
+		background-color: $bg_circular;
+		border-radius: 50%;
+		margin-bottom: 32px;
+
+		h1{
+			@include font_parameter(69px, $dark_color, 700, 48px, 0px);
+		}
+
+		.sub-1{
+			font-size: $f-16;
+			font-weight: $font-regular;
+			color: $light_dark
+		}
+
+		.sub-2{
+			font-size: $f-12;
+			font-weight: $font-regular;
+			color: $tertiary_color;
+		}
+
+		.currency{
+			vertical-align: top;
+			font-weight: $font-bold;
+			color: $dark_color;
+		}
+	}
+}
+
+/*===============================================================================*/
+/* contactus */
+/*===============================================================================*/
+.contactus{
+	background-color: $bg_light;
+	padding: 45px 0px 42px;
+	@include mq('tablet-small', max) {
+	    padding: 28px 0px 42px;
+	}
+	hr{
+		@include horizontal-divider(50px);
+		float: left;
+
+		@include mq('tablet-small', max) {
+	       border: 1px solid $orange_color;
+	       max-width: 62px;
+	       margin-bottom: 38px;
+	    }
+	}
+
+	.info{
+		font-weight:$font-regular;
+		@include mq('tablet-medium', max) {
+	    	margin-bottom: 25px;
+		}
+		.address{
+			color: $secondary_color;
+			h4{
+				font-size: $f-18;
+				font-weight:$font-bold;
+			}
+		}
+		.contact-number{
+			margin-bottom: 20px;
+			a{
+				color: $secondary_color;
+			}
+		}
+		.mailing{
+			a{
+				color: $orange_color;
+			}
+		}
+
+	}
+	form{
+		input, textarea{
+			border:0px;
+			border-bottom: 1px solid #999999;
+			border-radius:0px;
+			padding-left:0px;
+			font-size: $f-18;
+			font-weight: $font-regular;
+			padding-top: 0px;
+    		padding-bottom: 10px;
+
+    		&:focus{
+    			box-shadow: none;
+    			border-color: $orange_color;
+    		}
+		}
+
+		.form-group{
+			margin-bottom: 44px;
+		}
+	}
+
+	button{
+		@include button(192px);
+		&:hover{
+			@include hoverbutton(none, transparent);
+			color: $orange_color;
+			border: 1px solid $orange_color;
+		}
+	}
+}
+
+		.alert-success{
+			clear: both;
+		}
+/*===============================================================================*/
+/* footer */
+/*===============================================================================*/
+footer{
+	background-color: $bg_dark;
+	padding: 36px 0px 88px;
+	color: $primary_color;
+	font-weight: $font-regular;
+	@include mq('tablet', max) {
+		padding: 20px 0px;
+	}
+	a{
+		color: $primary_color;
+		margin-bottom: 16px;
+
+		&:hover{
+			color: $light_color;
+		}
+	}
+
+	.mb-25{
+		@include mq('tablet', max) {
+		    margin-bottom: 25px;
+		}
+	}
+	
+}
+
+/*===============================================================================*/
+/* bottom-text */
+/*===============================================================================*/
+.bottom-text{
+	background-color: $dark_color;
+	padding: 6px 0px;
+	p{
+		color: $tertiary_color;
+	}
 }

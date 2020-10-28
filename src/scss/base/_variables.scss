@@ -1,0 +1,32 @@
+// Functional color variables
+//---------------------------------------------------------------
+
+// Color
+//================================
+$dark_color: #000000;
+$light_color: #ffffff;
+$body_text: #666666;
+$title: #444444;
+$main_menu: #B3B3B3;
+$primary_color: #CCCCCC;
+$secondary_color: #4D4D4D;
+$tertiary_color: #808080;
+$orange_color: #F16739;
+$light_dark : #1A1A1A;
+$border-color: #999999;
+
+// Shadow Color
+//================================
+$shadow_color: $dark_color;
+
+// Background Color
+//================================
+$bg_dark: #333333;
+$bg_light: $light_color;
+$bg_yellow: #FDBA12;
+$bg_circular: #FFE8BB;
+
+// Overlay Color
+//================================
+$overlay_dark: $dark_color;
+$overlay_light: $light_color;

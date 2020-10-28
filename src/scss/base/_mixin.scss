@@ -1,0 +1,59 @@
+$breakpoints: ("phone": 320px,
+"phone-medium": 375px,
+"phone-wide": 480px,
+"tablet-small": 640px,
+"tablet": 768px,
+"tablet-medium": 991px,
+"tablet-wide": 1024px,
+"desktop": 1248px,
+"desktop-wide": 1500px,
+"desktop-large": 1920px);
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type==min {
+            $width: $width + 1px;
+        }
+
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin font_parameter($size, $color, $weight, $lh, $mb:0) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    line-height: $lh;
+    margin-bottom: $mb; 
+}
+
+@mixin horizontal-divider( $margin-bottom, $border: 2px solid $orange_color, $max-width: 102px, $width: 100%, $mt:0){
+	margin-bottom: $margin-bottom;
+	border: $border;
+	max-width: $max-width;
+	width: $width;
+	margin-top: $mt;
+}  
+
+@mixin button($m-width, $width: 100%, $border-radius:24px, $height: 48px, $lh:46px, $padding: 0px){
+	max-width: $m-width;
+	width: $width;
+	border-radius: $border-radius;
+	height: $height;
+	line-height: $lh;
+	background-color: $orange_color;
+	color: $light_color;
+	padding: $padding;
+	font-family: $font_primary;
+	font-weight: $font-regular;
+	font-size: $f-18;
+} 
+
+@mixin hoverbutton($decoration,$bckg){
+	text-decoration: $decoration;
+	background-color: $bckg;
+}
